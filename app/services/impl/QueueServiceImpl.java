@@ -28,11 +28,11 @@ public class QueueServiceImpl implements QueueService
     {
         ConnectionFactory factory = new ConnectionFactory();
 
-        factory.setUsername("guest");
-        factory.setPassword("guest");
-        factory.setVirtualHost("/");
-        factory.setHost("127.0.0.1");
-        factory.setPort(5672);
+        factory.setUsername(System.getenv("RMQ_USERNAME"));
+        factory.setPassword(System.getenv("RMQ_USERNAME"));
+        factory.setVirtualHost(System.getenv("RMQ_VHOSTS"));
+        factory.setHost(System.getenv("RMQ_IP"));
+        factory.setPort(Integer.parseInt(System.getenv("RMQ_PORT")));
 
         return factory;
     }
@@ -75,7 +75,7 @@ public class QueueServiceImpl implements QueueService
         Channel channel = connection.createChannel();
         try
         {
-            channel.exchangeDeclare(exchange, this.getExchangeType(exchange), true);
+//            channel.exchangeDeclare(exchange, this.getExchangeType(exchange), true);
 
             channel.basicPublish(exchange, routingKey, null, message.getBytes(StandardCharsets.UTF_8));
             success = true;

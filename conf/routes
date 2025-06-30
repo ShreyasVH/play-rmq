@@ -1,3 +1,4 @@
 GET 	/ 				controllers.IndexController.index()
 
 POST    /api/fanout    controllers.IndexController.sendFanout(request: Request)
+POST    /publish    controllers.IndexController.publish(request: Request)
