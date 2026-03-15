@@ -2,7 +2,7 @@ name := "play-rmq"
 
 version := "1.0.0"
 
-scalaVersion := "3.8.1"
+scalaVersion := "3.8.2"
 
 libraryDependencies ++= Seq(
   guice,
