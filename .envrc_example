@@ -1,0 +1,26 @@
+# sbt path
+export PATH=
+
+# java 25.0.2 path
+export PATH=
+
+export PORT=
+
+export APPLICATION_SECRET=
+
+export REPO_VERSION=$(grep "version := " build.sbt | awk -F\" '{print $2}')
+export REPO_NAME=$(grep "name := " build.sbt | awk -F\" '{print $2}')
+
+export RMQ_IP=
+export RMQ_PORT=
+export RMQ_USERNAME=
+export RMQ_PASSWORD=
+export RMQ_VERSION=
+export RMQ_VHOSTS=
+export RMQ_MANAGEMENT_PORT=
+
+export RMQ_EXCHANGE_DIRECT=
+export RMQ_QUEUE_CONSUMED=
+export RMQ_QUEUE_UNCONSUMED=
+export RMQ_KEY_CONSUMED=
+export RMQ_KEY_UNCONSUMED=
