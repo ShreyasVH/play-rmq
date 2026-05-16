@@ -1,7 +1,7 @@
 # sbt 1.12.11 path
 export PATH=
 
-# java 25.0.2 path
+# java 26.0.1 path
 export PATH=
 export JAVA_HOME=
 
