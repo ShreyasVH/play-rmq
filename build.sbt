@@ -6,7 +6,7 @@ scalaVersion := "3.8.4"
 
 libraryDependencies ++= Seq(
   guice,
-  "com.rabbitmq" % "amqp-client" % "5.31.0"
+  "com.rabbitmq" % "amqp-client" % "5.32.0"
 )
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava)
